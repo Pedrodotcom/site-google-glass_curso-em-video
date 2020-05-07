@@ -1,0 +1,58 @@
+@charset "UTF-8";
+form {
+    width: 650px;
+    margin: auto;
+}
+
+form fieldset {
+    border-radius: 8px;
+    border: 2px solid #888888;
+    margin: 20px;
+}
+
+form fieldset#usuario {
+    background: url(../_audiovisual/icone-contato.png) no-repeat 95% 95%;
+}
+
+form fieldset#endereco {
+    background: url(../_audiovisual/icone-endereco.png) no-repeat 95% 95%;
+}
+
+form fieldset#mensagem {
+    background: url(../_audiovisual/icone-mensagem.png) no-repeat 98% 95%;
+}
+
+form fieldset#pedido {
+    background: url(../_audiovisual/icone-pagamento.png) no-repeat 95% 95%;
+}
+
+form fieldset legend {
+    color: #888888;
+    font-weight: bold;
+    font-size: 13pt;
+    font-family: sans-serif;
+}
+
+form fieldset input, select, textarea {
+    margin: 10px 0 10px;
+    padding: 10px;
+    border-radius: 8px;
+    opacity: 0.8;
+} 
+
+form fieldset textarea {
+    margin-left: 50px;
+    min-width: 320px;
+}
+
+form fieldset#sexo {
+    width: 150px;
+    margin-left: 50px;
+}
+form fieldset#sexo input {
+    margin-left: 15px;
+}
+
+form fieldset select {
+    font-size: 10pt;
+} 

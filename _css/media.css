@@ -1,0 +1,51 @@
+@charset "UTF-8";
+
+div#tv-radio {
+    width: 900px;
+    height: 580px;
+    margin: 20px auto;
+    background: url("../_audiovisual/radio-tv.png") no-repeat;
+}
+
+div#tv-radio button {
+    background: none;
+    padding: 0;
+    margin: 0;
+    border: none;
+
+    cursor: pointer;
+}
+
+div#tv-radio button#botao-esquerda {
+    position: relative;
+    top: 73px;
+    right: 235px;
+    display: block;
+    float: right;
+}
+
+div#tv-radio button#botao-direita {
+    position: relative;
+    top: 181px;
+    right: 201px;
+    display: block;
+    float: right;
+}
+
+div#tv-radio audio#musica {
+    display: block;
+    position: relative;
+    top: 490px;
+    left: 573px;
+    width: 300px;
+}
+
+div#tv-radio iframe {
+    display: block;
+    position: relative;
+    top: 27px;
+    left: 87px;
+    width: 440px;
+    height: 315px;
+    border-radius: 8px;
+}
