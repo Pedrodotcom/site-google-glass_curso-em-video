@@ -11,19 +11,19 @@ form fieldset {
 }
 
 form fieldset#usuario {
-    background: url(../_audiovisual/icone-contato.png) no-repeat 95% 95%;
+    background: url(/_audiovisual/icone-contato.png) no-repeat 95% 95%;
 }
 
 form fieldset#endereco {
-    background: url(../_audiovisual/icone-endereco.png) no-repeat 95% 95%;
+    background: url(/_audiovisual/icone-endereco.png) no-repeat 95% 95%;
 }
 
 form fieldset#mensagem {
-    background: url(../_audiovisual/icone-mensagem.png) no-repeat 98% 95%;
+    background: url(/_audiovisual/icone-mensagem.png) no-repeat 98% 95%;
 }
 
 form fieldset#pedido {
-    background: url(../_audiovisual/icone-pagamento.png) no-repeat 95% 95%;
+    background: url(/_audiovisual/icone-pagamento.png) no-repeat 95% 95%;
 }
 
 form fieldset legend {

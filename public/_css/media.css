@@ -4,7 +4,7 @@ div#tv-radio {
     width: 900px;
     height: 580px;
     margin: 20px auto;
-    background: url("../_audiovisual/radio-tv.png") no-repeat;
+    background: url("/_audiovisual/radio-tv.png") no-repeat;
 }
 
 div#tv-radio button {

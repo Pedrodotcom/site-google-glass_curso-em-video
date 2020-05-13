@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <title>{{pageTitle}}</title>
+    <link rel="stylesheet" href="/_css/estilo.css">
+</head>
+
+<script src="/_javascript/funcoes.js"></script>
+
+<body>
+<div id="interface">
+    <header id="cabecalho">
+        <hgroup>
+            <h1>Google Glass</h1>
+            <h2>A revolução do Google está chegando</h2>
+        </hgroup>
+
+        <img id="icone" src="../{{srcIcone}}" alt="{{altDescription}}">
+
+        <nav id="menu">
+            <h1>Menu Principal</h1>
+            <ul>
+                <li onmouseover="mudaFoto('/_audiovisual/home.png')" onmouseout="mudaFoto('{{srcIcone}}')"><a href="/">HOME</a></li>
+                <li onmouseover="mudaFoto('/_audiovisual/especificacoes.png')" onmouseout="mudaFoto('{{srcIcone}}')"><a href="/specs">Especificações</a></li>
+                <li onmouseover="mudaFoto('/_audiovisual/fotos.png')" onmouseout="mudaFoto('{{srcIcone}}')"><a href="/fotos">Fotos</a></li>
+                <li onmouseover="mudaFoto('/_audiovisual/multimidia.png')" onmouseout="mudaFoto('{{srcIcone}}')"><a href="/multimidia">Multimídia</a></li>
+                <li onmouseover="mudaFoto('/_audiovisual/contato.png')" onmouseout="mudaFoto('{{srcIcone}}')"><a href="/fale-conosco">Fale conosco</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    {% block content %}
+    {% endblock %}
+
+    <footer>
+        <p>
+            &copy; Copyright 2013 - by Curso em Vídeo
+        </p>
+        <p>
+            <a href="https://www.facebook.com/CursosEmVideo/" target="_blank">Facebook</a> | <a href="https://twitter.com/cursosemvideo" target="_blank">Twitter</a>
+        </p>
+    </footer>
+</div>
+</body>
+</html>
+

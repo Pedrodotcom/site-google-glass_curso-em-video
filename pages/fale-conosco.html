@@ -4,11 +4,11 @@
 <head>
     <meta charset="UTF-8">
     <title>Contato - Google Glass</title>
-    <link rel="stylesheet" href="./_css/estilo.css">
-    <link rel="stylesheet" href="./_css/form.css">
+    <link rel="stylesheet" href="/_css/estilo.css">
+    <link rel="stylesheet" href="/_css/form.css">
 </head>
 
-<script src="./_javascript/funcoes.js"></script>
+<script src="/_javascript/funcoes.js"></script>
 <script>
     function calc_total() {
         let qtd = document.querySelector('input#quantPedido').value
@@ -25,16 +25,16 @@
             <h2>A revolução do Google está chegando</h2>
         </hgroup>
 
-        <img id="icone" src="./_audiovisual/contato.png" alt="Google Glass preto">
+        <img id="icone" src="/_audiovisual/contato.png" alt="Contato">
 
         <nav id="menu">
             <h1>Menu Principal</h1>
             <ul>
-                <li onmouseover="mudaFoto('_audiovisual/home.png')" onmouseout="mudaFoto('_audiovisual/contato.png')"><a href="./index.html">HOME</a></li>
-                <li onmouseover="mudaFoto('_audiovisual/especificacoes.png')" onmouseout="mudaFoto('_audiovisual/contato.png')"><a href="./specs.html">Especificações</a></li>
-                <li onmouseover="mudaFoto('_audiovisual/fotos.png')" onmouseout="mudaFoto('_audiovisual/contato.png')"><a href="fotos.html">Fotos</a></li>
-                <li onmouseover="mudaFoto('_audiovisual/multimidia.png')" onmouseout="mudaFoto('_audiovisual/contato.png')"><a href="./multimidia.html">Multimídia</a></li>
-                <li onmouseover="mudaFoto('_audiovisual/contato.png')" onmouseout="mudaFoto('_audiovisual/contato.png')"><a href="./fale-conosco.html">Fale conosco</a></li>
+                <li onmouseover="mudaFoto('/_audiovisual/home.png')" onmouseout="mudaFoto('/_audiovisual/contato.png')"><a href="/">HOME</a></li>
+                <li onmouseover="mudaFoto('/_audiovisual/especificacoes.png')" onmouseout="mudaFoto('/_audiovisual/contato.png')"><a href="/specs">Especificações</a></li>
+                <li onmouseover="mudaFoto('/_audiovisual/fotos.png')" onmouseout="mudaFoto('/_audiovisual/contato.png')"><a href="/fotos">Fotos</a></li>
+                <li onmouseover="mudaFoto('/_audiovisual/multimidia.png')" onmouseout="mudaFoto('/_audiovisual/contato.png')"><a href="/multimidia">Multimídia</a></li>
+                <li onmouseover="mudaFoto('/_audiovisual/contato.png')" onmouseout="mudaFoto('/_audiovisual/contato.png')"><a href="/fale-conosco">Fale conosco</a></li>
             </ul>
         </nav>
     </header>
@@ -47,7 +47,7 @@
                 <h3 class="right">Atualizado em 01/Maio/2013</h3>
             </header>
 
-            <form id="contato" method="POST" action="mailto:pedroluisaantonio@gmail.com" oninput="calc_total()">
+            <form id="contato" method="POST" action="/fale-conosco/submit" oninput="calc_total()">
                 <fieldset id="usuario">
                     <legend>
                         Identificação do Usuário
@@ -164,7 +164,7 @@
                         </p>
                 </fieldset>
 
-                <input id="submitButton" type="image" src="./_audiovisual/botao-enviar.png" alt="Botão para envio do formulário.">
+                <input id="submitButton" type="image" src="/_audiovisual/botao-enviar.png" alt="Botão para envio do formulário.">
             </form>
 
         </article>

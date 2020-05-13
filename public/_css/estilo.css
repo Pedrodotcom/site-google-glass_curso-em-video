@@ -93,7 +93,7 @@ p {
 #cabecalho {
     border-bottom: 1px solid #60606094;
     height: 150px;
-    background: url("../_audiovisual/glass-logo-peq.jpg") no-repeat 0px 115px; /*recurso para se
+    background: url("/_audiovisual/glass-logo-peq.jpg") no-repeat 0px 115px; /*recurso para se
     inserir uma imagem como background de um container no código CSS. Os três parametros
     subsequentes ao endereço da imagem indicam que a imagem não deve ser repetida, caso
     seja menor que o container, o deslocamento horizontal e o deslocamento vertical.*/
