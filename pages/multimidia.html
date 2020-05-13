@@ -1,37 +1,16 @@
-<!DOCTYPE html>
-<html lang="pt-br">
+{% extends "basic-layout.html" %}
+    
+    {% set pageTitle = "Multimídia - Google Glass" %}
 
-<head>
-    <meta charset="UTF-8">
-    <title>Multimídia - Google Glass</title>
-    <link rel="stylesheet" href="/_css/estilo.css">
-    <link rel="stylesheet" href="/_css/media.css">
-</head>
+    {% set pathEstilo2 = "/_css/media.css" %}
+    
+    {% set srcIcone = "/_audiovisual/multimidia.png" %}
+    {% set altDescription = "Multimídia" %}
+    
+{% block content %} 
 
-<script src="/_javascript/funcoes.js"></script>
-<script src="/_javascript/videos.js"></script>
+    <script src="/_javascript/videos.js"></script>
 
-<body>
-<div id="interface">
-    <header id="cabecalho">
-        <hgroup>
-            <h1>Google Glass</h1>
-            <h2>A revolução do Google está chegando</h2>
-        </hgroup>
-
-        <img id="icone" src="/_audiovisual/multimidia.png" alt="Multimídia">
-
-        <nav id="menu">
-            <h1>Menu Principal</h1>
-            <ul>
-                <li onmouseover="mudaFoto('/_audiovisual/home.png')" onmouseout="mudaFoto('/_audiovisual/multimidia.png')"><a href="/">HOME</a></li>
-                <li onmouseover="mudaFoto('/_audiovisual/especificacoes.png')" onmouseout="mudaFoto('/_audiovisual/multimidia.png')"><a href="/specs">Especificações</a></li>
-                <li onmouseover="mudaFoto('/_audiovisual/fotos.png')" onmouseout="mudaFoto('/_audiovisual/multimidia.png')"><a href="/fotos">Fotos</a></li>
-                <li onmouseover="mudaFoto('/_audiovisual/multimidia.png')" onmouseout="mudaFoto('/_audiovisual/multimidia.png')"><a href="/multimidia">Multimídia</a></li>
-                <li onmouseover="mudaFoto('/_audiovisual/contato.png')" onmouseout="mudaFoto('/_audiovisual/multimidia.png')"><a href="/fale-conosco">Fale conosco</a></li>
-            </ul>
-        </nav>
-    </header>
     <section id="corpo-full">
         <article>
             <header>
@@ -58,14 +37,5 @@
             </div>
         </article>
     </section>
-    <footer>
-        <p>
-            &copy; Copyright 2013 - by Curso em Vídeo
-        </p>
-        <p>
-            <a href="https://www.facebook.com/CursosEmVideo/" target="_blank">Facebook</a> | <a href="https://twitter.com/cursosemvideo" target="_blank">Twitter</a>
-        </p>
-    </footer>
-</div>
-</body>
-</html>
+
+{% endblock %}
