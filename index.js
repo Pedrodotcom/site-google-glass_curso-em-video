@@ -6,6 +6,7 @@ app.use(express.static(__dirname + '/public'))
 const nunjucks = require('nunjucks')
 nunjucks.configure('pages', {
     express: app,
+    noCache: true,
 })
 
 // Rotas da aplicação
@@ -35,13 +36,10 @@ nunjucks.configure('pages', {
     })
 
     app.post('/fale-conosco/submit', function(req, res) {
-    
-            if(err) {
-                return res.status(400).send('Server error. Please, try again.')
-            }
 
-            res.send("Mensagem registrada com sucesso!")
-            res.redirect('/')
+        //res.send("Mensagem registrada com sucesso!")
+        res.redirect('../')
+
     })
 
 // Porta do servidor

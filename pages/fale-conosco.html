@@ -33,15 +33,11 @@
                     </legend>
                         <p>
                             <label for="idName">Nome:</label>
-                            <input id="idName" type="text">
-                        </p>
-                        <p>
-                            <label for="idSenha">Senha:</label>
-                            <input id="idSenha" type="password">
+                            <input name="name" id="idName" type="text">
                         </p>
                         <p>
                             <label for="idEmail">E-mail:</label>
-                            <input  id="idEmail" type="email">
+                            <input name="email" id="idEmail" type="email">
                         </p>
                         <fieldset id="sexo">
                             <legend>Sexo</legend>
@@ -50,7 +46,7 @@
                         </fieldset>
                         <p>
                             <label for="datanasc">Data de nascimento:</label>
-                            <input id="datanasc" type="date" name="date" placeholder="Data de nascimento">
+                            <input name="birth" id="datanasc" type="date" name="date" placeholder="Data de nascimento">
                         </p>
                 </fieldset>
     
@@ -60,17 +56,17 @@
                     </legend>
                         <p>
                             <label for="endLogra">Logradouro:</label>
-                            <input type="text" placeholder="Rua, Av., Praça, etc.">
+                            <input name="adress" type="text" placeholder="Rua, Av., Praça, etc.">
                         </p>
                         <p>
                             <label for="numRua">Número:</label>
-                            <input id="numRua" type="number" name="num" min="0" max="100000">
+                            <input id="numRua" type="number" name="adressNum" min="0" max="100000">
                             <label for="complem">Complemento:</label>
-                            <input id="complem" type="text" size="4">
+                            <input name="adressComplement" id="complem" type="text" size="4">
                         </p>
                         <p>
                             <label for="endEstado">Estado:</label>
-                            <select name="endEstado-sct" id="endEstado">
+                            <select name="endEstado" id="endEstado">
                                 <option value="_" default>Selecione o estado</option>
                                 <option value="AC">Acre</option>
                                 <option value="AL">Alagoas</option>
@@ -101,7 +97,7 @@
                                 <option value="TO">Tocantins</option>
                             </select>
                             <label for="endCity">Cidade:</label>
-                            <input id="endCity" type="text">
+                            <input name="city" id="endCity" type="text">
                         </p>
                 </fieldset>
     
@@ -135,7 +131,7 @@
                         </p>
                         <p>
                             <label for="quantPedido">Quantidade:</label>
-                            <input id="quantPedido" type="number" min="0" max="1000">
+                            <input name="amount" id="quantPedido" type="number" min="0" max="1000">
                         </p>
                         <p>
                             <label for="precoPedido">Preço Total: R$</label>
