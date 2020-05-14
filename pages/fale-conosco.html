@@ -9,13 +9,7 @@
     
 {% block content %} 
 
-    <script>
-        function calc_total() {
-            let qtd = document.querySelector('input#quantPedido').value
-            let valor = Number(qtd) * 1500
-            document.querySelector('input#precoPedido').value = valor
-        }
-    </script>
+    <script src="/_javascript/form-functions.js"></script>
 
     <section id="corpo-full">
         <article>
@@ -26,10 +20,10 @@
                 <h3 class="right">Atualizado em 01/Maio/2013</h3>
             </header>
 
-            <form id="contato" method="POST" action="/fale-conosco/submit" oninput="calc_total()">
+            <form id="contato" method="POST" action="/fale-conosco" onsubmit="return checkFields(event)" oninput="calc_total()">
                 <fieldset id="usuario">
                     <legend>
-                        Identificação do Usuário
+                        Identificação do Usuário *
                     </legend>
                         <p>
                             <label for="idName">Nome:</label>
@@ -41,8 +35,8 @@
                         </p>
                         <fieldset id="sexo">
                             <legend>Sexo</legend>
-                                <input type="radio" name="nSexo" id="fem" checked><label for="fem">Feminino</label> <br>
-                                <input type="radio" name="nSexo" id="male"><label for="male">Masculino</label>
+                                <input type="radio" name="nSex" value="Feminino" id="fem" checked><label for="fem">Feminino</label> <br>
+                                <input type="radio" name="nSex" value="Masculino" id="male"><label for="male">Masculino</label>
                         </fieldset>
                         <p>
                             <label for="datanasc">Data de nascimento:</label>
@@ -52,7 +46,7 @@
     
                 <fieldset id="endereco">
                     <legend>
-                        Endereço do Usuário
+                        Endereço do Usuário *
                     </legend>
                         <p>
                             <label for="endLogra">Logradouro:</label>
@@ -61,12 +55,12 @@
                         <p>
                             <label for="numRua">Número:</label>
                             <input id="numRua" type="number" name="adressNum" min="0" max="100000">
-                            <label for="complem">Complemento:</label>
-                            <input name="adressComplement" id="complem" type="text" size="4">
+                            <label id="complemLabel" for="complem">Complemento:</label>
+                            <input name="adressComplement" id="complem" type="text" size="4" oninput="opacity()">
                         </p>
                         <p>
                             <label for="endEstado">Estado:</label>
-                            <select name="endEstado" id="endEstado">
+                            <select name="state" id="endEstado">
                                 <option value="_" default>Selecione o estado</option>
                                 <option value="AC">Acre</option>
                                 <option value="AL">Alagoas</option>
@@ -103,7 +97,7 @@
     
                 <fieldset id="mensagem">
                     <legend>
-                        Mensagem do Usuário
+                        Mensagem do Usuário *
                     </legend>
                         <P>
                             <label for="msgUrg">Grau de Urgência:</label>
@@ -122,12 +116,12 @@
                         Quero um Google Glass
                     </legend>
                         <p>
-                            <input type="checkbox" name="pedido" id="checkPedido" checked>
+                            <input type="checkbox" name="quest" id="checkPedido" checked>
                             <label for="checkPedido">Gostaria de adquirir um Google Glass quando disponível</label>
                         </p>
                         <p>
                             <label for="corPedido">Cor:</label>
-                            <input type="color" name="cor" id="corPedido">
+                            <input type="color" name="color" id="corPedido">
                         </p>
                         <p>
                             <label for="quantPedido">Quantidade:</label>
