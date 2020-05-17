@@ -44,11 +44,12 @@ routes.post('/fale-conosco', function(req, res) {
             state,
             city,
             mUrg,
+            title,
             msg,
             quest,
             color,
             amount
-        ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?);
+        ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?);
     `
     const msg = [
         req.body.name,
@@ -61,6 +62,7 @@ routes.post('/fale-conosco', function(req, res) {
         req.body.state,
         req.body.city,
         req.body.mUrg,
+        req.body.title,
         req.body.msg,
         req.body.quest,
         req.body.color,
@@ -78,6 +80,10 @@ routes.post('/fale-conosco', function(req, res) {
 
 // Rotas da aplicação - Administrador
 
+routes.get('/login-admin', function(req, res) {
+    return res.render('admin-login.html')
+})
+
 routes.get('/readmessages', function(req, res) {
     db.all(`SELECT * FROM messages`, function(err, rows) {
         if(err) {
@@ -85,7 +91,29 @@ routes.get('/readmessages', function(req, res) {
             return res.status(400).send('Database error. Please,try again.')
         }
 
-        return res.json({ messages: rows })
+        return res.render('admin-messages.html', { messages: rows })
+    })
+
+})
+
+routes.get('/readmessages/details/:id', function(req, res) {
+    db.all(`SELECT * FROM messages WHERE id=${req.params.id}`, function(err, rows) {
+        if(err) {
+            console.log(err)
+            return res.status(400).send('Database error. Please,try again.')
+        }
+
+        return res.render('admin-messages-detail.html', { messages: rows })
+    })
+})
+
+routes.delete("/readmessages/detail/:id/delete", (req, res) => {
+    db.run(`DELETE FROM messages WHERE id=${req.params.id}`, function(err) {
+        if(err){
+            return res.status(400).send('Database error! Please, try again.')
+        }
+
+        return res.redirect('/readmessages', 200)
     })
 })
 
@@ -100,14 +128,14 @@ routes.delete('/readmessages/delete', function(req, res) {
     })
 })
 
-routes.delete('/readmessages/delete/:id', function(req, res) {
-    db.all(`DELETE FROM messages WHERE ${req.params.id}`, function(err, rows) {
+routes.delete('/donotdothis/dropt@ble', function(req, res) {
+    db.all(`DROP TABLE messages`, function(err, rows) {
         if(err) {
             console.log(err)
             return res.status(400).send('Database error. Please,try again.')
         }
 
-        return res.status(200).json({ messages: rows })
+        return res.status(200).send("Deleted")
     })
 })
 

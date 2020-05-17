@@ -285,6 +285,7 @@ footer p {
     text-align: center;
     padding-bottom: 0;
     margin-bottom: 0;
+    text-indent: 0;
 }
 
 footer p a:hover {

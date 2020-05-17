@@ -15,6 +15,7 @@ db.serialize(function() {
             state BLOB,
             city TEXT,
             mUrg BLOB,
+            title TEXT,
             msg TEXT,
             quest BLOB,
             color BLOB,

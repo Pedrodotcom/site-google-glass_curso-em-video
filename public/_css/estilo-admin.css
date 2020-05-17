@@ -1,0 +1,145 @@
+/*Tela de Login do administrador*/
+
+form#adminLoginForm {
+    padding: 30px;
+    border: 0.5px solid rgba(0, 0, 0, 0.6);
+    border-radius: 8px;
+    margin: 40px 350px;
+    box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.6);
+}
+
+form#adminLoginForm input {
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid black;
+    margin-left: 20px;
+} 
+
+form#adminLoginForm p{
+    margin: 20px auto 5px;
+    text-align: center;
+    text-indent: 0;
+}
+
+form#adminLoginForm button {
+    font-size: 12pt;
+    color: #ffffff;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+    letter-spacing: 1px;
+    font-weight: bolder;
+    padding: 10px 30px;
+    border-radius: 8px;
+    background: #b4b4b4;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+    display: block;
+    margin: 30px auto 10px;
+}
+
+form#adminLoginForm button:hover {
+    cursor: pointer;
+}
+
+form#adminLoginForm button:active {
+    box-shadow: 0.5px 0.5px 2px rgba(0, 0, 0, 0.7);
+}
+
+/*Tela de Mensagens do administrador*/
+
+nav#menu li {
+    float: right;
+    margin: 0 150px;
+}
+
+div.message {
+    border: 1px solid rgba(0, 0, 0, 0.6);
+    border-radius: 8px;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+    padding: 10px;
+    margin: 10px;
+}
+
+div.message:hover {
+    cursor: pointer;
+}
+
+div.message h1 {
+    display: inline-block;
+    margin: 10px 0 0 20px;
+    text-align: start;
+}
+
+div.message h2 {
+    text-align: end;
+    margin: 0 20px 20px 0;
+}
+
+div.message h3 {
+    text-align: left;
+    margin: 0 0 10px 25px;
+    color: #969595;
+}
+
+div.message p {
+    text-align: left;
+    margin: 0 20px 20px 20px;
+    font-size: 13pt;
+    text-indent: 30px;
+}
+
+div.message input {
+    float: right;
+    margin: 10px 20px 0 0;
+}
+
+/*Tela de Detalhes das Mensagens do administrador*/
+
+input#backButton {
+    margin: 20px 0 0 20px;
+}
+form#detail {
+    padding: 10px 100px 30px;
+}
+
+form#detail h2 {
+    margin: 0;
+}
+
+form#detail h4 {
+    display: inline;;
+}
+
+form#detail h5 {
+    margin-left: 20px;
+}
+
+form#detail textarea {
+    margin: 20px auto 10px;
+    display: block;
+    font-size: 12pt;
+    min-width: 900px;
+    max-width: 900px;
+    border-radius: 8px;
+    padding: 5px;
+}
+
+form#detail button {
+    font-size: 12pt;
+    color: #000000;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+    letter-spacing: 1px;
+    font-weight: bolder;
+    padding: 10px 30px;
+    border-radius: 8px;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+    display: block;
+    margin: 30px auto 10px;
+}
+
+form#detail button:hover {
+    cursor: pointer;
+    background: #c4c4c4;
+}
+
+form#detail input {
+    float: right;
+} 

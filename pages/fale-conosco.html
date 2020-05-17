@@ -23,7 +23,7 @@
             <form id="contato" method="POST" action="/fale-conosco" onsubmit="return checkFields(event)" oninput="calc_total()">
                 <fieldset id="usuario">
                     <legend>
-                        Identificação do Usuário *
+                        Identificação *
                     </legend>
                         <p>
                             <label for="idName">Nome:</label>
@@ -46,7 +46,7 @@
     
                 <fieldset id="endereco">
                     <legend>
-                        Endereço do Usuário *
+                        Endereço *
                     </legend>
                         <p>
                             <label for="endLogra">Logradouro:</label>
@@ -97,7 +97,7 @@
     
                 <fieldset id="mensagem">
                     <legend>
-                        Mensagem do Usuário *
+                        Mensagem *
                     </legend>
                         <P>
                             <label for="msgUrg">Grau de Urgência:</label>
@@ -105,6 +105,10 @@
                         <p>
                             Mínimo<input type="range" name="mUrg" id="msgUrg" min="0" max="5">Máximo
                         </P>
+                        <p>
+                            <label for="title">Título:</label>
+                            <input name="title" id="msgTitle" type="text">
+                        </p>
                         <p>
                             <label for="msg">Mensagem:</label> <br>
                             <textarea name="msg" id="msg" cols="30" rows="7"></textarea>
