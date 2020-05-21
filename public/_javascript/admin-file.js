@@ -1,14 +1,9 @@
-let messages = document.querySelector('div.message')
-
-function deletingMessage (event){
-    event.preventDefault()
-    for (message in messages) {
-        //message.setAtributte({appear: false})
-        if (message.appear == false) {
-            message.style.display = "none"
-        }
-    }
-    
+function deletingMessage(event){
+    if (confirm(`Você deseja apagar a mensagem? Essa ação não pode ser revertida.`) == false){
+        event.preventDefault()
+    } else {
+        return true
+    } 
 }
 
 function verifyAnswer(event) {

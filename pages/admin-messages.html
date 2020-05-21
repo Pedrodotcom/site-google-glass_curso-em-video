@@ -26,20 +26,41 @@
             </nav>
         </header>
     
-        {% for message in messages %}
+        {% if (messages.length != 0) %}
+        
+            {% for message in messages %}
+                    <div class="message" 
+                        {% if message.admin_response %} 
+                            style="opacity: 0.5;" 
+                        {% endif %}>
+                        <form method="GET" action="/readmessages/details/{{message.id}}/delete">
+                            <input onclick= "return deletingMessage(event)" type="image" src="/_audiovisual/delete.png" alt="Lixeira">
+                        </form>
+                        <a href="/readmessages/details/{{message.id}}">
+                            <h1>
+                                {{message.title}}
+                                    {% if message.admin_response %}
+                                        - <strong>&#10004;</strong>
+                                    {% endif %}
+                            </h1>
+                            <h3>{{message.name}}</h3>
+                            <p>{{message.msg}}</p>
+                            {% if message.admin_response %}
+                                <h4>Respondida em {{message.answered_at}}</h4>
+                            {% else %}
+                                <h4>Recebida em {{message.sent_at}}</h4>
+                            {% endif %}
+                            <h2>Nvl. {{message.mUrg}}</h2>
+                        </a>
+                    </div>
+            {% endfor %}
 
-            <a href="/readmessages/details/{{message.id}}">
-                <div class="message">
-                    <input onclick="deletingMessage(event)" type="image" src="/_audiovisual/delete.png" alt="Lixeira">
-                    <h1>{{message.title}}</h1>
-                    <h3>{{message.name}}</h3>
-                    <p>{{message.msg}}</p>
-                    <h2>Nvl. {{message.mUrg}}</h2>
-                </div>
-            </a>
+        {% else %}
 
-        {% endfor %}
-    
+            <h2>Você não possui mensagens!</h2>
+
+        {% endif %}
+
         <footer>
             <p>
                 &copy; Copyright 2013 - by Curso em Vídeo

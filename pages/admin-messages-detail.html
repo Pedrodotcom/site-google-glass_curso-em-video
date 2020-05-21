@@ -12,11 +12,11 @@
 
     <div id="interface">
             <a href="/readmessages"><input type="image" src="/_audiovisual/voltar.png" alt="Voltar" id="backButton"></a>
-            <form id=detail>
-            <!-- <form method="POST" action="/readmessages" id="detail"> -->
+            
+            {% for message in messages %}
 
-                {% for message in messages %}
-                    <input method="GET" action="/readmessages/detail/{{message.id}}/delete" type="image" src="/_audiovisual/delete.png" alt="Lixeira">
+                <form method="POST" action="/readmessages/details/{{message.id}}" id=detail>
+                    <input onclick="return deletingMessage(event)" formmethod="GET" formaction="/readmessages/details/{{message.id}}/delete" type="image" src="/_audiovisual/delete.png" alt="Lixeira">
                     <h2>Nível de urgência: {{message.mUrg}}</h2>
                     <h3>{{message.name}}</h3>
                     <h5>Email: {{message.email}}</h5>
@@ -30,21 +30,28 @@
                     {% if message.quest %}
 
                         <h4>Pedido:</h4>
-                            <p>Desejo receber <strong>{{message.amount}}</strong> Glasses da cor <strong id="color-request">{{message.color}}</strong>.</p>
+                            <p>Desejo receber <strong>{{message.amount}}</strong> Glasses da cor <strong>{{message.color}}</strong>.</p>
         
                     {% else %}
 
                         <h4>Não há pedidos :(</h4>
 
                     {% endif %}
-                        
-                {% endfor %}
 
-                <textarea name="admin-answer" id="adminAnswer" cols="30" rows="10"></textarea>
+                    {% if message.admin_response %}
 
-                <button onclick="return verifyAnswer(event)" type="submit">Responder</button>
+                        <textarea name="admin_response" id="adminAnswer" cols="30" rows="10" readonly>{{message.admin_response}}</textarea>
+                        <button type="submit" style="opacity: 0.5;" disabled>Responder</button>
 
-            </form>
+                    {% else %}
+
+                        <textarea name="admin_response" id="adminAnswer" cols="30" rows="10"></textarea>
+                        <button onclick="return verifyAnswer(event)" type="submit">Responder</button>
+
+                    {% endif %}
+                </form>
+
+            {% endfor %}
     </div>
 </body>
 </html>

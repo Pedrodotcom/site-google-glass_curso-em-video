@@ -68,6 +68,11 @@ div.message h1 {
     text-align: start;
 }
 
+div.message h1 strong {
+    color: green;
+    font-size: 20pt;
+}
+
 div.message h2 {
     text-align: end;
     margin: 0 20px 20px 0;
@@ -77,6 +82,12 @@ div.message h3 {
     text-align: left;
     margin: 0 0 10px 25px;
     color: #969595;
+}
+
+div.message h4 {
+    float: left;
+    text-indent: 20px;
+    margin: 10px 0;
 }
 
 div.message p {
@@ -89,6 +100,11 @@ div.message p {
 div.message input {
     float: right;
     margin: 10px 20px 0 0;
+    opacity: 0.8;
+}
+
+div.message input:hover {
+    opacity: 1;
 }
 
 /*Tela de Detalhes das Mensagens do administrador*/

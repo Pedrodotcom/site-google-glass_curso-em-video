@@ -19,7 +19,10 @@ db.serialize(function() {
             msg TEXT,
             quest BLOB,
             color BLOB,
-            amount INTEGER
+            amount INTEGER,
+            sent_at DATETIME DEFAULT CURRENT_TIMESTAMP,
+            admin_response TEXT,
+            answered_at DATETIME DEFAULT CURRENT_TIMESTAMP
         );
     `)
 })
